@@ -148,9 +148,6 @@ streamlit run app.py
 - **Secrets not picked up:** Confirm `.streamlit/secrets.toml` is in the project root and formatted as TOML.
 
 ---
-Got it 👍 — since your code loads a trained model (`traffic_model.pkl`) and maps its numeric outputs to **Low (0)**, **Medium (1)**, **High (2)**, or **Unknown**, the exact ranges depend on how that model was trained. But I can give you a **sample synthetic data range** that matches typical traffic scenarios so you can test your app and see each category fire.
-
----
 
 ## 🚦 Sample input ranges for congestion levels
 
@@ -177,41 +174,6 @@ Got it 👍 — since your code loads a trained model (`traffic_model.pkl`) and 
 - **Unknown** happens if:
   - The model predicts a class not in `{0,1,2}`.
   - Or encoders fail (e.g., you input a Date/Weather not seen during training).
-
----
-
-## 🧪 Example test cases you can plug into the sidebar
-
-1. **Low congestion case**
-   - Junction: J1  
-   - Date: any valid date in encoder  
-   - Time: 09:00  
-   - Vehicle Count: 25  
-   - Speed: 90 km/h  
-   - Weather: Clear  
-   - Green: 80 sec, Red: 20 sec  
-
-2. **Medium congestion case**
-   - Junction: J2  
-   - Date: any valid date  
-   - Time: 18:00  
-   - Vehicle Count: 75  
-   - Speed: 55 km/h  
-   - Weather: Cloudy  
-   - Green: 50 sec, Red: 50 sec  
-
-3. **High congestion case**
-   - Junction: J1  
-   - Date: any valid date  
-   - Time: 08:30  
-   - Vehicle Count: 150  
-   - Speed: 25 km/h  
-   - Weather: Rain  
-   - Green: 20 sec, Red: 90 sec  
-
-4. **Unknown case**
-   - Try entering a Weather value not in your encoder (e.g., “Snow” if not trained).  
-   - Or manually tamper with encoders so prediction returns a class outside 0–2.
 
 ---
 ## License
