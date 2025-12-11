@@ -1,6 +1,6 @@
 # Traffic Congestion Prediction & Smart Agent System
 
-This project presents an AI-powered traffic congestion prediction system integrated with a rule-based traffic agent. Built using **Python, Streamlit, scikit-learn**, and **Google Gemini API**, and deployed on **IBM Cloud**, the app enables real-time congestion forecasting and dynamic traffic signal control.
+This project presents an AI-powered traffic congestion prediction system integrated with a rule-based traffic agent. Built using **Python, Streamlit, scikit-learn**, and **Google Gemini API**.
 
 ---
 
@@ -11,7 +11,6 @@ This project presents an AI-powered traffic congestion prediction system integra
 - Suggests traffic control decisions via a rule-based agent.
 - Utilizes Google Gemini for explanation and summarization.
 - Streamlit-powered user interface.
-- IBM Cloud ready for scalable deployment.
 
 ---
 ## What this app does
